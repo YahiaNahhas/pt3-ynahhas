@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Book.create([
+              { title: 'Jaws', author: 'Peter Benchley', year: 1974, publisher: 'Doubleday' },
+              { title: 'Murder on the Orient Express', author: 'Agatha Christie', year: 1934,
+publisher: 'Collins Crime Club' },
+              { title: 'Slaughterhouse-Five', author: 'Kurt Vonnegut', year: 1969, publisher: 'Delacorte' },
+              { title: 'Fahrenheit 451', author: 'Ray Bradbury', year: 1953, publisher: 'Ballantine Books' },
+              { title: 'Death on the Nile', author: 'Agatha Christie', year: 1937, publisher: 'Collins Crime Club' }
+            ])
